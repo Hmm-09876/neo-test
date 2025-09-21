@@ -1,0 +1,45 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: neo-recorder
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: neo-recorder
+  template:
+    metadata:
+      labels:
+        app: neo-recorder
+    spec:
+      containers:
+        - name: app
+          image: neo-part4:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 3000
+          env:
+            - name: HF_API_TOKEN
+              valueFrom:
+                secretKeyRef:
+                  name: hf-secret
+                  key: token
+          resources:
+            requests:
+              cpu: "100m"
+              memory: "128Mi"
+            limits:
+              cpu: "500m"
+              memory: "512Mi"
+          readinessProbe:
+            httpGet:
+              path: /ready
+              port: 3000
+            initialDelaySeconds: 5
+            periodSeconds: 10
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 3000
+            initialDelaySeconds: 20
+            periodSeconds: 20

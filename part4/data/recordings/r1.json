@@ -1,0 +1,47 @@
+{
+  "id": "r1",
+  "status": "finished",
+  "created_at": "2025-09-20T15:19:31.886Z",
+  "chunks": [
+    {
+      "index": 0,
+      "s3": "local://storage/r1-0.bin",
+      "status": "uploaded",
+      "ts": "2025-09-20T15:19:31.893Z"
+    },
+    {
+      "index": 1,
+      "s3": "local://storage/r1-1.bin",
+      "status": "uploaded",
+      "ts": "2025-09-20T15:19:32.405Z"
+    },
+    {
+      "index": 2,
+      "s3": "local://storage/r1-2.bin",
+      "status": "uploaded",
+      "ts": "2025-09-20T15:19:32.908Z"
+    },
+    {
+      "index": 3,
+      "s3": "local://storage/r1-3.bin",
+      "status": "uploaded",
+      "ts": "2025-09-20T15:19:33.425Z"
+    },
+    {
+      "index": 4,
+      "s3": "local://storage/r1-4.bin",
+      "status": "uploaded",
+      "ts": "2025-09-20T15:19:33.931Z"
+    },
+    {
+      "index": 5,
+      "s3": "local://storage/r1-5.bin",
+      "status": "uploaded",
+      "ts": "2025-09-20T15:19:35.094Z"
+    }
+  ],
+  "durationSec": 30,
+  "chunkSec": 5,
+  "totalChunks": 6,
+  "finished_at": "2025-09-20T15:19:35.613Z"
+}

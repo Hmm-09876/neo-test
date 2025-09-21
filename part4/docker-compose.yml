@@ -1,0 +1,16 @@
+version: "3.9"
+services:
+  app:
+    image: neo-part4:latest
+    build: .
+    container_name: neo-part4
+    ports:
+      - "3000:3000"
+    environment:
+      DEMO_FAST: "true"
+      SIMULATE_FAIL_CHANCE: "0.2"
+      HF_API_TOKEN: ${HF_API_TOKEN}
+    volumes:
+      - ./data:/app/data
+      - ./storage:/app/storage
+    restart: unless-stopped

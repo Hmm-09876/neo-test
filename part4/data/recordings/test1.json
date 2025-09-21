@@ -1,0 +1,13 @@
+{
+  "id": "test1",
+  "status": "recording",
+  "chunks": [
+    {
+      "index": 0,
+      "s3": "local://storage/test1-0.bin",
+      "status": "uploaded",
+      "err": "simulated",
+      "retried_at": "2025-09-20T15:17:45.077Z"
+    }
+  ]
+}
