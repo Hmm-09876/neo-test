@@ -7,6 +7,7 @@
 - Retry with exponential backoff (with cap).
 
 **Scalability**
+- Use a browser pool instead of spawning a new browser each time.
 - Separate upload workers and autoscale them (HPA); add resource requests/limits.
 
 **Monitoring**
